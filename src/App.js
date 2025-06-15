@@ -25,7 +25,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", formData);
+      const res = await axios.post("backend-dev.ap-south-1.elasticbeanstalk.com/predict", formData);
       setResult(res.data);
     } catch (err) {
       alert("Prediction failed. Please try again.");
